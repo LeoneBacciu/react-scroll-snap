@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import "./App.css";
-import FullPageSnap from "react-full-page-snap";
-import "react-full-page-snap/dist/index.css";
+import FullPageSnap from "react-scroll-snap";
+import "react-scroll-snap/dist/index.css";
 
 function App() {
   const ref = useRef<React.ElementRef<typeof FullPageSnap>>(null);
@@ -19,7 +19,7 @@ function App() {
         speedUp={500}
         speedDown={1000}
         initialPage={(page) => console.log(`initial: ${page}`)}
-        beforePageChange={(oldPage, newPage) =>
+        beforePageChange={(oldPage) =>
           console.log(`before: ${oldPage}`)
         }
         afterPageChange={(oldPage, newPage) => console.log(`after: ${newPage}`)}

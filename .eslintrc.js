@@ -22,6 +22,7 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": ["warn", { extensions: [".tsx"] }],
     "react/require-default-props": "off",
+    "react/function-component-definition": "off",
   },
   settings: {
     "import/resolver": {

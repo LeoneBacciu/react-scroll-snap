@@ -45,7 +45,7 @@ const FullPageSnap: React.ForwardRefRenderFunction<
     initialPage,
     afterPageChange,
     beforePageChange,
-    scrollOptions = {},
+    scrollOptions,
   }: FullPageSnapProps,
   ref
 ) => {
@@ -66,7 +66,7 @@ const FullPageSnap: React.ForwardRefRenderFunction<
   }, []);
 
   const scrollPage = useCallback(
-    async (down: boolean, pages: number = 1, speed?: number) => {
+    async (down: boolean, pages: number = 1, speed: number | undefined = undefined) => {
       if (isAnimating.current) return;
 
       isAnimating.current = true;
